@@ -154,7 +154,7 @@ public class skosComputerScience {
 		//c31.addProperty(hasBroader, 24);
 
 		try {
-			FileOutputStream ost = new FileOutputStream("skos_computer_science.rdf");
+			FileOutputStream ost = new FileOutputStream("computerscience.rdf");
 			//
 			System.out.println("Exercice 2 : construction du référentiel en SKOS");
 			m.write(System.out, "N3");

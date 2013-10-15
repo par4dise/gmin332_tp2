@@ -1,4 +1,7 @@
 //package vocabulary;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.vocabulary.RDF;
@@ -175,8 +178,17 @@ public class Q2 {
     	m.add(b7, RDF.type, Book);
     	m.add(b7, DC.creator, a11); 	
 
-    	m.write(System.out, "N3"); 
-    	//m.write(System.out, "RDF/XML-ABBREV"); 
+    	try {
+			FileOutputStream ost = new FileOutputStream("livres.rdf");
+			
+			m.write(ost, "RDF/XML-ABBREV" );
+			System.out.println("Exercice 2 : livres");
+	    	m.write(System.out, "N3"); 
+	    	//m.write(System.out, "RDF/XML-ABBREV"); 
+		} 
+    	catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
     	
        
 }

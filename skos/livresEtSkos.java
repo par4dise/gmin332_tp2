@@ -181,7 +181,7 @@ public class livresEtSkos {
     	m.add(b7, DC.creator, a11); 	
     	
     	try {
-			FileOutputStream ost = new FileOutputStream("livres_et_skos.rdf");
+			FileOutputStream ost = new FileOutputStream("livres_et_computerscience.rdf");
 			
 			m.write(ost, "RDF/XML-ABBREV" );
 			System.out.println("Exercice 3 : annotation sémantique du jeu de données");
