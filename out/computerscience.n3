@@ -1,0 +1,87 @@
+@prefix DC:      <http://purl.org/dc/elements/1.1/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix cs:      <http://computerscience#> .
+
+cs:System
+      a       skos:Concept ;
+      skos:broader cs:ComputerScience ;
+      skos:preLabel "System" .
+
+cs:QueryBased
+      a       skos:Concept ;
+      skos:broader cs:Language ;
+      skos:preLabel "QueryBased" .
+
+cs:Descriptive
+      a       skos:Concept ;
+      skos:broader cs:Language ;
+      skos:preLabel "Descriptive" .
+
+cs:NoSQL
+      a       skos:Concept ;
+      skos:broader cs:DatabaseSystem ;
+      skos:preLabel "NoSQL" .
+
+cs:KnowledgeBased
+      a       skos:Concept ;
+      skos:broader cs:Descriptive ;
+      skos:preLabel "KnowledgeBased" .
+
+cs:SPARQL
+      a       skos:Concept ;
+      skos:broader cs:QueryBased ;
+      skos:preLabel "SPARQL" .
+
+cs:OperatingSystem
+      a       skos:Concept ;
+      skos:broader cs:System ;
+      skos:preLabel "OperatingSystem" .
+
+cs:Object-Relational
+      a       skos:Concept ;
+      skos:broader cs:DatabaseSystem ;
+      skos:preLabel "Object-Relational" .
+
+cs:ObjectOriented
+      a       skos:Concept ;
+      skos:broader cs:Language ;
+      skos:preLabel "ObjectOriented" .
+
+cs:ComputerScience
+      a       skos:Concept ;
+      skos:preLabel "ComputerScience" .
+
+cs:Relational
+      a       skos:Concept ;
+      skos:broader cs:DatabaseSystem ;
+      skos:preLabel "Relational" .
+
+cs:RDF
+      a       skos:Concept ;
+      skos:broader cs:Descriptive ;
+      skos:preLabel "RDF" .
+
+cs:DatabaseSystem
+      a       skos:Concept ;
+      skos:broader cs:System ;
+      skos:preLabel "DatabaseSystem" .
+
+cs:SQL
+      a       skos:Concept ;
+      skos:broader cs:QueryBased ;
+      skos:preLabel "SQL" .
+
+cs:Functional
+      a       skos:Concept ;
+      skos:broader cs:Language ;
+      skos:preLabel "Functional" .
+
+cs:Language
+      a       skos:Concept ;
+      skos:broader cs:ComputerScience ;
+      skos:preLabel "Language" .
+
+cs:Software
+      a       skos:Concept ;
+      skos:broader cs:ComputerScience ;
+      skos:preLabel "Software" .

@@ -1,0 +1,79 @@
+<rdf:RDF
+    xmlns:cs="http://computerscience#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:DC="http://purl.org/dc/elements/1.1/">
+  <skos:Concept rdf:about="http://computerscience#NoSQL">
+    <skos:broader>
+      <skos:Concept rdf:about="http://computerscience#DatabaseSystem">
+        <skos:broader>
+          <skos:Concept rdf:about="http://computerscience#System">
+            <skos:broader>
+              <skos:Concept rdf:about="http://computerscience#ComputerScience">
+                <skos:preLabel>ComputerScience</skos:preLabel>
+              </skos:Concept>
+            </skos:broader>
+            <skos:preLabel>System</skos:preLabel>
+          </skos:Concept>
+        </skos:broader>
+        <skos:preLabel>DatabaseSystem</skos:preLabel>
+      </skos:Concept>
+    </skos:broader>
+    <skos:preLabel>NoSQL</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#KnowledgeBased">
+    <skos:broader>
+      <skos:Concept rdf:about="http://computerscience#Descriptive">
+        <skos:broader>
+          <skos:Concept rdf:about="http://computerscience#Language">
+            <skos:broader rdf:resource="http://computerscience#ComputerScience"/>
+            <skos:preLabel>Language</skos:preLabel>
+          </skos:Concept>
+        </skos:broader>
+        <skos:preLabel>Descriptive</skos:preLabel>
+      </skos:Concept>
+    </skos:broader>
+    <skos:preLabel>KnowledgeBased</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#SPARQL">
+    <skos:broader>
+      <skos:Concept rdf:about="http://computerscience#QueryBased">
+        <skos:broader rdf:resource="http://computerscience#Language"/>
+        <skos:preLabel>QueryBased</skos:preLabel>
+      </skos:Concept>
+    </skos:broader>
+    <skos:preLabel>SPARQL</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#OperatingSystem">
+    <skos:broader rdf:resource="http://computerscience#System"/>
+    <skos:preLabel>OperatingSystem</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#Object-Relational">
+    <skos:broader rdf:resource="http://computerscience#DatabaseSystem"/>
+    <skos:preLabel>Object-Relational</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#ObjectOriented">
+    <skos:broader rdf:resource="http://computerscience#Language"/>
+    <skos:preLabel>ObjectOriented</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#Relational">
+    <skos:broader rdf:resource="http://computerscience#DatabaseSystem"/>
+    <skos:preLabel>Relational</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#RDF">
+    <skos:broader rdf:resource="http://computerscience#Descriptive"/>
+    <skos:preLabel>RDF</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#SQL">
+    <skos:broader rdf:resource="http://computerscience#QueryBased"/>
+    <skos:preLabel>SQL</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#Functional">
+    <skos:broader rdf:resource="http://computerscience#Language"/>
+    <skos:preLabel>Functional</skos:preLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://computerscience#Software">
+    <skos:broader rdf:resource="http://computerscience#ComputerScience"/>
+    <skos:preLabel>Software</skos:preLabel>
+  </skos:Concept>
+</rdf:RDF>

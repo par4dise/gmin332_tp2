@@ -11,13 +11,15 @@ import com.hp.hpl.jena.vocabulary.DC;
 
 // Construction du dataset
 public class Q2 {
-
-      public static void main( String[] args ) {
+	public static final String nsB = "http://www.livres.fr#";
+	public static final String nsA = "http://www.auteurs.fr#";
+	
+	public static void main( String[] args ) {
         
         Model m = ModelFactory.createDefaultModel();
     	// 2 NS différents 
-        String nsB = "http://www.livres.fr#";
-    	String nsA = "http://www.auteurs.fr#";
+        
+    	
 		m.setNsPrefix("Livres", nsB);
 		m.setNsPrefix("Auteurs", nsA);
 	

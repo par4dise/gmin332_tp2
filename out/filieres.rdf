@@ -1,0 +1,35 @@
+<rdf:RDF
+    xmlns:filiere="http://www.test.fr/filiere#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:FOAF="http://xmlns.com/foaf/0.1/"
+    xmlns:DC="http://purl.org/dc/elements/1.1/"
+    xmlns:XSD="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Pierre_Dupond">
+    <FOAF:mbox rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dupont@lirmm.fr</FOAF:mbox>
+    <FOAF:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dupont</FOAF:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.test.fr/filiere#decol">
+    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data and knowledge</skos:definition>
+    <skos:broader rdf:resource="http://www.test.fr/filiere#informatique"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.test.fr/filiere#universite_montpellier_2">
+    <skos:related rdf:resource="http://www.test.fr/filiere#decol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.test.fr/filiere#informatique">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.test.fr/filiere#aigle">
+    <skos:broader rdf:resource="http://www.test.fr/filiere#informatique"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.test.fr/filiere#Filieres_universitaires">
+    <FOAF:maker rdf:resource="http://xmlns.com/foaf/0.1/Pierre_Dupond"/>
+    <DC:subject>un thesaurus sur les filieres univ.</DC:subject>
+    <DC:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-10-15T15:23:12.427Z</DC:date>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+</rdf:RDF>
