@@ -1,3 +1,5 @@
+package demo;
+
 import com.hp.hpl.jena.rdf.model.*;
 
 import java.io.FileOutputStream;

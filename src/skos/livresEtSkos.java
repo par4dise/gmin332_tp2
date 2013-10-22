@@ -12,6 +12,8 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 import com.hp.hpl.jena.sparql.vocabulary.FOAF;
 import com.hp.hpl.jena.vocabulary.DC;
 
+import exos.Q2;
+
 import skos.*;
 
 /* Exercice 3 : annotation sémantique du jeu de données */

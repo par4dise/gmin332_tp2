@@ -1,0 +1,9 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="http://www.livres.fr#0-13-861337-0">
+    <dc:subject rdf:resource="http://computerscience#DatabaseSystem"/>
+    <dc:subject rdf:resource="http://computerscience#System"/>
+    <dc:subject rdf:resource="http://computerscience#ComputerScience"/>
+  </rdf:Description>
+</rdf:RDF>

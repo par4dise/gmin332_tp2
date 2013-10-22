@@ -1,0 +1,18 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:agrovoc="http://aims.fao.org/aos/agrovoc#">
+  <skos:Concept rdf:about="http://aims.fao.org/aos/agrovoc#704">
+    <skos:broader>
+      <skos:Concept rdf:about="http://aims.fao.org/aos/agrovoc#703">
+        <skos:broader>
+          <skos:Concept rdf:about="http://aims.fao.org/aos/agrovoc#c15807">
+            <skos:prefLabel>Arecaceae</skos:prefLabel>
+          </skos:Concept>
+        </skos:broader>
+        <skos:prefLabel>Attalea</skos:prefLabel>
+      </skos:Concept>
+    </skos:broader>
+    <skos:prefLabel>Attalea funifera</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>

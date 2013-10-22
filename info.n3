@@ -1,0 +1,45 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix info:    <http://www.computerscience.fr/skos#> .
+
+info:i_NoSql
+      a       info:NoSql .
+
+info:DatabaseSystem
+      a       skos:Concept ;
+      skos:altLabel "General Dababase"^^xsd:string ;
+      skos:broader info:System ;
+      skos:preLabel "Database System"^^xsd:string .
+
+info:ComputerScience
+      a       skos:Concept ;
+      skos:altLabel "Informatics"^^xsd:string ;
+      skos:definition "Computer Science (abbreviated CS or CompSci) is the scientific and practical approach to computation and its applications"^^xsd:string ;
+      skos:preLabel "Computer Science"^^xsd:string .
+
+info:NoSql
+      a       skos:Concept ;
+      skos:altLabel "NOSql Database"^^xsd:string ;
+      skos:broader info:DatabaseSystem ;
+      skos:definition "A NoSQL database provides a mechanism for storage and retrieval of data that employs less constrained consistency models than traditional relational databases"^^xsd:string ;
+      skos:preLabel "Not Only SQL"^^xsd:string .
+
+info:i_databaseSystem
+      a       info:DatabaseSystem .
+
+info:System
+      a       skos:Concept ;
+      skos:altLabel "Informatic Systems"^^xsd:string ;
+      skos:broader info:ComputerScience ;
+      skos:preLabel "System"^^xsd:string .
+
+info:i_relational
+      a       info:Relational .
+
+info:Relational
+      a       skos:Concept ;
+      skos:altLabel "Traditional Database"^^xsd:string ;
+      skos:broader info:DatabaseSystem ;
+      skos:preLabel "Relational Database"^^xsd:string .
