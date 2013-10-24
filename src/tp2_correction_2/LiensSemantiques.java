@@ -1,9 +1,11 @@
-package vocabulary;
+package tp2_correction_2;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Set;
+
+import vocabulary.Skos_Voc;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -26,7 +28,7 @@ public class LiensSemantiques {
         //mCS = ModelFactory.createRDFSModel(mCS);
 
         Model mLivres = ModelFactory.createDefaultModel();
-        FileManager.get().readModel( mLivres, "Livres.rdf" );
+        FileManager.get().readModel( mLivres, "livres.rdf" );
         //mLivres = ModelFactory.createRDFSModel(mLivres);
 
         

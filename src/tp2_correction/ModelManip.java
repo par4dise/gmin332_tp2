@@ -12,6 +12,7 @@ import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
 import java.util.ArrayList;
 import java.util.List;
+
 import vocabulary.Skos_Voc;
 
 public class ModelManip {

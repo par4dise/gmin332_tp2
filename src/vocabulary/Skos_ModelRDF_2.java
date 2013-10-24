@@ -1,29 +1,26 @@
-package Vocabs;
+package vocabulary;
 
 import java.util.Iterator;
 
-import com.hp.hpl.jena.sparql.core.ResultBinding;
-import com.hp.hpl.jena.query.Query;
+
 import com.hp.hpl.jena.rdf.model.*;
+import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDF;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
 
 
-public class Skos_ModelRDF_1
+
+public class Skos_ModelRDF_2
 {
 
     public static final String NL = System.getProperty("line.separator") ;
-
+    public static final String n3_file = "filieres.n3";
 	  public static void main(String[] args)
 	    {
 		  Model m = ModelFactory.createOntologyModel();
-		  String fil_URL = "file:filieres.rdf";
-		  m.read(fil_URL);
-		  String fil_ns="http://www.test.fr/filiere#";
+		  FileManager.get().readModel( m, n3_file );
+	       
+	      String country = m.getNsPrefixURI("filiere" );
+		 
 		  String skos_ns="http://www.w3.org/2004/02/skos/core#";
 		 
 		  Resource skosConcept = m.getResource(skos_ns+"Concept" );  
@@ -37,6 +34,7 @@ public class Skos_ModelRDF_1
 	    		 Resource cpt = res_i.nextResource();
 	    		 String name = cpt.getLocalName();
 	    		 System.out.println("les concepts skos "+cpt.getLocalName());
+	    		 
 	    		 
 	    	}
 		  

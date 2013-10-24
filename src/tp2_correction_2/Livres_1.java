@@ -1,4 +1,4 @@
-package vocabulary;
+package tp2_correction_2;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
