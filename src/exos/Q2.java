@@ -188,7 +188,7 @@ public class Q2 {
     	m.add(b7, DC.creator, a11); 	
 
     	try {
-			FileOutputStream ost = new FileOutputStream("out/livres.rdf");
+			FileOutputStream ost = new FileOutputStream("seb/livres.rdf");
 			
 			m.write(ost, "RDF/XML-ABBREV" );
 			System.out.println("Exercice 2 : livres");

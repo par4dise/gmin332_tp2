@@ -73,11 +73,11 @@ public class ComputerScience_SKOS {
          CSSkos.m.write(System.out,"N3");
          
          try {       
-		    	  FileOutputStream outStream = new FileOutputStream("info.rdf");
+		    	  FileOutputStream outStream = new FileOutputStream("out/info.rdf");
 		             // exporte le resultat dans un fichier
 		              CSSkos.m.write(outStream, "RDF/XML");
 		             outStream.close();
-		           FileOutputStream outStream1 = new FileOutputStream("info.n3");
+		           FileOutputStream outStream1 = new FileOutputStream("out/info.n3");
 		              CSSkos.m.write(outStream1, "N3");
 		             outStream1.close();
 	    	 }

@@ -15,7 +15,7 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 public class Livre_CS_Explanation
 {
 
-	 public static final String n3_file = "CS_Livre_MD.n3";
+	 public static final String n3_file = "out/CS_Livre_MD.n3";
 	  public static void main(String[] args)
 	    {
 		  Model m = ModelFactory.createOntologyModel();

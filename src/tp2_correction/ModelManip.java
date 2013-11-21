@@ -18,8 +18,8 @@ import vocabulary.Skos_Voc;
 public class ModelManip {
 
     public static final String NL = System.getProperty("line.separator");
-    public static final String info = "info.rdf";
-    public static final String livres = "livres.rdf";
+    public static final String info = "out/info.rdf";
+    public static final String livres = "out/livres.rdf";
 
     public static void main(String[] args) {
 

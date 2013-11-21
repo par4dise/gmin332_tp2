@@ -141,11 +141,11 @@ public class skosComputerScience {
 		CS.add(c37, Skos_Voc.broader, c21);
 
 		try {
-			FileOutputStream ost = new FileOutputStream("out/computerscience.rdf");
+			FileOutputStream ost = new FileOutputStream("seb/computerscience.rdf");
 			CS.write(ost, "RDF/XML-ABBREV" ); 
             ost.close();
             
-            FileOutputStream outStream1 = new FileOutputStream("out/computerscience.n3");
+            FileOutputStream outStream1 = new FileOutputStream("seb/computerscience.n3");
             CS.write(outStream1, "N3");
             outStream1.close();
         }
