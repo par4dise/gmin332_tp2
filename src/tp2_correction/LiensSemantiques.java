@@ -28,7 +28,7 @@ public class LiensSemantiques {
         //mCS = ModelFactory.createRDFSModel(mCS);
 
         Model mLivres = ModelFactory.createDefaultModel();
-        FileManager.get().readModel( mLivres, "Livres.rdf" );
+        FileManager.get().readModel( mLivres, "livres.rdf" );
         //mLivres = ModelFactory.createRDFSModel(mLivres);
 
         

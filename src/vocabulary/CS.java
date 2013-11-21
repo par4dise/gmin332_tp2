@@ -1,9 +1,11 @@
-package vocabulary;
+package tp2_correction_2;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
+
+import vocabulary.Skos_Voc;
 
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.sparql.vocabulary.FOAF;

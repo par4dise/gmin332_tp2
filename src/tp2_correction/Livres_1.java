@@ -162,12 +162,12 @@ public class Livres_1 {
     	m.add(b9,PublicationAuthor,a10);
 
    	 try {       
-   	  FileOutputStream outStream = new FileOutputStream("Livres.rdf");
+   	  FileOutputStream outStream = new FileOutputStream("out/Livres.rdf");
             // exporte le resultat dans un fichier
             m.write(outStream, "RDF/XML");
             outStream.close();
             
-          FileOutputStream outStream1 = new FileOutputStream("Livres.n3");
+          FileOutputStream outStream1 = new FileOutputStream("out/Livres.n3");
             m.write(outStream1, "N3");
             outStream1.close();
 	 }
