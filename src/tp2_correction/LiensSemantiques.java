@@ -1,9 +1,11 @@
-package vocabulary;
+package tp2_correction;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Set;
+
+import vocabulary.Skos_Voc;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;

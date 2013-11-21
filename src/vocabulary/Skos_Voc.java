@@ -10,13 +10,15 @@ public class Skos_Voc {
 	protected static final String uri ="http://www.w3.org/2004/02/skos/core#";
 	
 	public static String getUri()
-	{return uri;}
+		{return uri;}
 
+	// PropertyImpl = implementation of Property. 
+	// http://www.cs.helsinki.fi/group/wwwmuseo/jena-doc/com/hp/hpl/mesa/rdf/jena/common/PropertyImpl.html
 	public static Property getCProperty(String pName)
-	{return new PropertyImpl(getUri(), pName); }
+		{return new PropertyImpl(getUri(), pName); }
 	
 	public static Resource getCResource(String pName)
-	{return new ResourceImpl(getUri(), pName); }
+		{return new ResourceImpl(getUri(), pName); }
 	
 	// Properties
 	public static Property altLabel = null;

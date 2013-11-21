@@ -7,11 +7,8 @@ import java.util.Calendar;
 
 import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.sparql.vocabulary.FOAF;
-import com.hp.hpl.jena.sparql.vocabulary.VocabTestQuery;
 import com.hp.hpl.jena.vocabulary.DC;
-import com.hp.hpl.jena.vocabulary.DC_10;
 import com.hp.hpl.jena.vocabulary.RDF;
-import com.hp.hpl.jena.vocabulary.DCTerms;
 import com.hp.hpl.jena.vocabulary.XSD;
 import vocabulary.*;
 
@@ -19,9 +16,7 @@ public class Skos_Ex_Voc {
 
 	static final String filiere_ns ="http://www.test.fr/filiere#";
 	
-	public static void main(String args[])
-	{
-
+	public static void main(String args[]) {
 		try {	
 			 Model m = ModelFactory.createDefaultModel();
 				m.setNsPrefix("filiere",filiere_ns);
@@ -33,7 +28,6 @@ public class Skos_Ex_Voc {
 			// un individu skos:ConceptScheme
 			 Resource cs1 = m.createResource(filiere_ns+"Filieres_universitaires");
 			 cs1.addProperty(RDF.type, Skos_Voc.ConceptScheme);
-			 
 			 
 			 // un premier individu skos:Concept
 			 Resource f1 = m.createResource(filiere_ns+"informatique");
@@ -50,13 +44,10 @@ public class Skos_Ex_Voc {
 			 f3.addProperty(RDF.type, Skos_Voc.Concept);
 			 f3.addProperty(Skos_Voc.broader, f1);
 			 
-			 
 				// un quatrieme individu skos:Concept
 			 Resource u1 = m.createResource(filiere_ns+"universite_montpellier_2");
 			 u1.addProperty(RDF.type, Skos_Voc.Concept);
 			 u1.addProperty(Skos_Voc.related, f2);
-			 
-			
 			
 			 
 			 // annotations pour ConceptScheme
@@ -67,10 +58,8 @@ public class Skos_Ex_Voc {
 			 cs1.addProperty(DC.subject,"un thesaurus sur les filieres univ.");
 			 cs1.addProperty(FOAF.maker, m.createResource(FOAF.getURI()+"Pierre_Dupond").addProperty(RDF.type, FOAF.Person).addLiteral(FOAF.name, "Dupont").addLiteral(FOAF.mbox,"dupont@lirmm.fr"));
 			 
-			 
 			 // afficher les triplets ainsi definis
 			 m.write(System.out, "N3");
-		    	
 	    	 try {       
 		    	  FileOutputStream outStream = new FileOutputStream("out/filieres.rdf");
 		             // exporte le resultat dans un fichier

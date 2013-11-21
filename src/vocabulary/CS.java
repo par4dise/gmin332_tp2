@@ -19,11 +19,8 @@ public class CS {
 	
 	static final String computerSciences_ns ="http://www.test.fr/computerSciences#";
 	
-	public static void main(String args[])
-	{
-
-		try
-		{	
+	public static void main(String args[]) {
+		try	{	
 			 Model m = ModelFactory.createDefaultModel();
 				m.setNsPrefix("computerScience",computerSciences_ns);
 				m.setNsPrefix("skos",Skos_Voc.getUri());
@@ -34,7 +31,6 @@ public class CS {
 				// skos:ConceptScheme
 				Resource csComputerSciences = m.createResource(computerSciences_ns+"Computer_Sciences");
 				csComputerSciences.addProperty(RDF.type, Skos_Voc.ConceptScheme);
-				 
 				 
 				// skos:Concept
 				Resource rLanguage = m.createResource(computerSciences_ns+"language");

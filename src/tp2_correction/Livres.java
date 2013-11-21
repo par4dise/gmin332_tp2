@@ -122,11 +122,11 @@ public class Livres {
        livres.m.write(System.out,"N3");
        
         try {       
-		    	  FileOutputStream outStream = new FileOutputStream("livres.rdf");
+		    	 // FileOutputStream outStream = new FileOutputStream("out/livres.rdf");
 		             // exporte le resultat dans un fichier
-		              livres.m.write(outStream, "RDF/XML");
-		             outStream.close();
-		           FileOutputStream outStream1 = new FileOutputStream("livres.n3");
+		         //     livres.m.write(outStream, "RDF/XML");
+		         //    outStream.close();
+		           FileOutputStream outStream1 = new FileOutputStream("out/livres.n3");
 		              livres.m.write(outStream1, "N3");
 		             outStream1.close();
 	    	 }

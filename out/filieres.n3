@@ -27,6 +27,6 @@ filiere:aigle
 
 filiere:Filieres_universitaires
       a       skos:ConceptScheme ;
-      DC:date "2013-10-15T15:23:12.427Z"^^XSD:dateTime ;
+      DC:date "2013-11-17T21:12:34.183Z"^^XSD:dateTime ;
       DC:subject "un thesaurus sur les filieres univ." ;
       FOAF:maker FOAF:Pierre_Dupond .

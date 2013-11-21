@@ -14,13 +14,19 @@ import com.hp.hpl.jena.vocabulary.DC;
 public class Q2 {
 	public static final String nsB = "http://www.livres.fr#";
 	public static final String nsA = "http://www.auteurs.fr#";
+
+	
+	public static String getUriBooks() {
+		return nsB;
+	}
+	public static String getUriAuthors() {
+		return nsA;
+	}
 	
 	public static void main( String[] args ) {
         
         Model m = ModelFactory.createDefaultModel();
     	// 2 NS différents 
-        
-    	
 		m.setNsPrefix("Livres", nsB);
 		m.setNsPrefix("Auteurs", nsA);
 	
@@ -182,7 +188,7 @@ public class Q2 {
     	m.add(b7, DC.creator, a11); 	
 
     	try {
-			FileOutputStream ost = new FileOutputStream("livres.rdf");
+			FileOutputStream ost = new FileOutputStream("out/livres.rdf");
 			
 			m.write(ost, "RDF/XML-ABBREV" );
 			System.out.println("Exercice 2 : livres");

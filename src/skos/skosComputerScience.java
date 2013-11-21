@@ -1,20 +1,15 @@
 package skos;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import com.hp.hpl.jena.rdf.model.*;
-import com.hp.hpl.jena.sparql.vocabulary.FOAF;
-import com.hp.hpl.jena.vocabulary.DC;
 import com.hp.hpl.jena.vocabulary.RDF;
-import com.hp.hpl.jena.vocabulary.DCTerms;
 import vocabulary.*;
 
 /* Exercice 2 : construction du référentiel en SKOS */
 public class skosComputerScience {
-	public static final String skos_ns ="http://www.w3.org/2004/02/skos/core#";
-	public static final String cs_ns ="http://computerscience#";
+	protected static final String cs_ns ="http://computerscience#";
 	
 	public static final String lab0 ="ComputerScience";
 	public static final String lab11 ="Language";
@@ -22,12 +17,27 @@ public class skosComputerScience {
 	public static final String lab13 ="System";
 	public static final String lab21 ="DatabaseSystem";
 	
+	public static String getUri() {
+		return cs_ns;
+	}
+	
+	public static String getLabel(int label) {
+		switch(label) {
+			case 0: return lab0;
+			case 11: return lab11;
+			case 12: return lab12;
+			case 13: return lab13;
+			case 21: return lab21;
+			default: return "";
+		}
+	}
+	
 	public static void main(String args[])
 	{
 		Model CS = ModelFactory.createDefaultModel();
 
 		CS.setNsPrefix("skos", Skos_Voc.getUri());
-		CS.setNsPrefix("DC",DC.getURI());
+		//CS.setNsPrefix("DC",DC.getURI());
 		CS.setNsPrefix("cs", cs_ns);				
 		
 		// litteraux
@@ -113,23 +123,6 @@ public class skosComputerScience {
 		CS.add(c37, RDF.type, Skos_Voc.Concept);
 		CS.add(c37, Skos_Voc.prefLabel, lab37);
 
-		/*CS.add(c0, Skos_Voc.broader, c11);
-		CS.add(c0, Skos_Voc.broader, c12);
-		CS.add(c0, Skos_Voc.broader, c13);
-		CS.add(c13, Skos_Voc.broader, c21);
-		CS.add(c13, Skos_Voc.broader, c22);
-		CS.add(c11, Skos_Voc.broader, c23);
-		CS.add(c11, Skos_Voc.broader, c24);
-		CS.add(c11, Skos_Voc.broader, c25);
-		CS.add(c11, Skos_Voc.broader, c26);
-		CS.add(c24, Skos_Voc.broader, c31);
-		CS.add(c24, Skos_Voc.broader, c32);
-		CS.add(c26, Skos_Voc.broader, c33);
-		CS.add(c26, Skos_Voc.broader, c34);
-		CS.add(c21, Skos_Voc.broader, c35);
-		CS.add(c21, Skos_Voc.broader, c36);
-		CS.add(c21, Skos_Voc.broader, c37);*/
-		
 		CS.add(c11, Skos_Voc.broader, c0);
 		CS.add(c12, Skos_Voc.broader, c0);
 		CS.add(c13, Skos_Voc.broader, c0);
@@ -160,7 +153,7 @@ public class skosComputerScience {
 			System.out.println("pb de fichier");
 		} 
 		
-		System.out.println("Exercice 2 : construction du référentiel en SKOS");
+		System.out.println("Exercice 2 : construction du r�f�rentiel en SKOS");
 		CS.write(System.out, "N3");
 	}
 }

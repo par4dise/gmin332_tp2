@@ -19,13 +19,12 @@ public class Livre_CS_Explanation
 	  public static void main(String[] args)
 	    {
 		  Model m = ModelFactory.createOntologyModel();
-		  FileManager.get().readModel( m, n3_file );
+		  //FileManager.get().readModel( m, n3_file );
 		  InfModel inf_m = ModelFactory.createRDFSModel(m);
 	       
-	      String livres = m.getNsPrefixURI("livres" );
 	      String computerScience = m.getNsPrefixURI("cs" );
 	      Property dctSubject = m.getProperty("http://purl.org/dc/terms/"+"subject");
-		 
+	      System.out.println(dctSubject);
 		  Resource databaseSystem = m.getResource(computerScience+"DatabaseSystem" ); 
 		  Property skosBroader = m.getProperty(Skos_Voc.getUri()+"broader");
 	
@@ -35,7 +34,7 @@ public class Livre_CS_Explanation
 		  // et d'appliquer la transitivité par le biais du prédicat subClassOf
 		 
 		  // TEST 1 : A commenter ou a decommenter pour voir les effets 
-		 //  m.add(skosBroader, RDFS.subPropertyOf, RDFS.subClassOf);
+		   m.add(skosBroader, RDFS.subPropertyOf, RDFS.subClassOf);
 	      System.out.println("Les individus specialisant "+databaseSystem.getLocalName());
 	  
 	    	// la transivite ne s'applique pas skosBroader -> necessite le passage a owl

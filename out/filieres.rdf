@@ -29,7 +29,7 @@
   <rdf:Description rdf:about="http://www.test.fr/filiere#Filieres_universitaires">
     <FOAF:maker rdf:resource="http://xmlns.com/foaf/0.1/Pierre_Dupond"/>
     <DC:subject>un thesaurus sur les filieres univ.</DC:subject>
-    <DC:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-10-15T15:23:12.427Z</DC:date>
+    <DC:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-11-17T21:12:34.183Z</DC:date>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
   </rdf:Description>
 </rdf:RDF>

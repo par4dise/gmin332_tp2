@@ -43,11 +43,11 @@ public class ModelManip {
         System.out.println("les ressources de type Livre : ");
         while (res_livre.hasNext()) {
             Resource l = res_livre.nextResource();
-            System.out.println("URI du livre : " + l.toString());
+            System.out.println("  + URI du livre : " + l.toString());
         }
-        // Toutes les ressouces de type Livre avec une √©tiquette relational
+        // Toutes les ressouces de type Livre avec une etiquette relational
         ResIterator res_relational = m.listSubjectsWithProperty(Skos_Voc.prefLabel, "Relational Database");
-        System.out.println("Toutes les ressouces de type Livre avec une √©tiquette 'relational'");
+        System.out.println("Toutes les ressouces de type Livre avec une Ètiquette 'relational'");
         while (res_relational.hasNext()) {
             Resource c = res_relational.nextResource();
             ResIterator res_l = m.listResourcesWithProperty(DC.subject, c);
@@ -72,11 +72,11 @@ public class ModelManip {
         System.out.println("--------------------------------------------");
         System.out.println("Le raisonnement sur le modele rdfs permet seulement 3 mecanismes d'interpretation");
         System.out.println("	-sur les sous-proprietes");
-        System.out.println("	-sur les individus attach√©s √† une sous-classe");
-        System.out.println("	-sur les domaines de d√©finition et image pour \"realiser\" un individu");
-        System.out.println("ICI on fait jouer la transivit√© sur les sous-classes de concepts √† partir d'une sous-propriet√©");
+        System.out.println("	-sur les individus attachÈs ‡ une sous-classe");
+        System.out.println("	-sur les domaines de dÈfinition et image pour \"realiser\" un individu");
+        System.out.println("ICI on fait jouer la transivitÈ sur les sous-classes de concepts a partir d'une sous-proprietÈ");
         System.out.println("Ensuite, on explore ces concepts avec une arrayList");
-        System.out.println("Autre moyen : Passer √† un modele plus expressif = OWL!");
+        System.out.println("Autre moyen : passer a un modele plus expressif = OWL!");
 
         m.add(Skos_Voc.broader, RDFS.subPropertyOf, RDFS.subClassOf);
 	// Cr√©ation mod√®le implicite
@@ -102,9 +102,9 @@ public class ModelManip {
         // ICI on fait jouer la transivit√© sur les sous-classes de concepts √† partir d'individus 
 	// attaches a ces concepts
         System.out.println("--------------------------------------------");
-        System.out.println("Une solution faisant jou√©e l'inf√©rence sur les individus est aussi propos√©e :");
+        System.out.println("Une solution faisant jouer l'infÈrence sur les individus est aussi proposÈe :");
         System.out.println("");
-        System.out.println("On a annot√© en utilisant la propri√©t√© dc:subject les livres book 6, book 7 et book 8 respectivement avec les individus i_database, i_relational et i_NoSql");
+        System.out.println("On a annotÈ en utilisant la propriÈtÈ dc:subject les livres book 6, book 7 et book 8 respectivement avec les individus i_database, i_relational et i_NoSql");
         System.out.println("Les livres traitant de l'individu i_databaseSystem :");	 	    		 	 
         // Recherche des individus sur le concept parcouru, utilise l'inf√©rence
         ResIterator res_inf_individus = inf_m.listSubjectsWithProperty(RDF.type, database_concept );

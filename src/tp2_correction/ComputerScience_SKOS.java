@@ -25,6 +25,7 @@ public class ComputerScience_SKOS {
 	m.setNsPrefix("xsd", XSD.getURI());
         
     }
+    
     public void addSkosConcept(String URI,String broaderConcept,String prefLabel, String definition, String altLabel){
         Resource c = m.createResource(URI);
         c.addProperty(RDF.type,Skos_Voc.Concept);
@@ -39,12 +40,19 @@ public class ComputerScience_SKOS {
         if(!altLabel.isEmpty())
             c.addProperty(Skos_Voc.altLabel, m.createTypedLiteral(altLabel, XSD.getURI()+"string"));
     }
+    
      public static void main(String[] args) {
          
          ComputerScience_SKOS CSSkos = new ComputerScience_SKOS();
-         CSSkos.addSkosConcept(cs_ns+"ComputerScience", "", "Computer Science", "Computer Science"
-                 + " (abbreviated CS or CompSci) is the scientific and practical approach to computation "
-                 + "and its applications", "Informatics");
+         CSSkos.addSkosConcept(cs_ns+"ComputerScience",   // URI
+        		 			   // broaderConcept
+        		 			   "", 			
+        		 			   // prefLabel 
+        		 			   "Computer Science", 						
+        		 			   // definition
+        		 			   "Computer Science" + " (abbreviated CS or CompSci) is the scientific and practical approach to computation "  + "and its applications", 
+        		 			   // altLabel
+        		 			   "Informatics");
          CSSkos.addSkosConcept(cs_ns+"System", cs_ns+"ComputerScience","System", "", "Informatic Systems");
          CSSkos.addSkosConcept(cs_ns+"DatabaseSystem", cs_ns+"System","Database System", "", "General Dababase");
          CSSkos.addSkosConcept(cs_ns+"Relational", cs_ns+"DatabaseSystem","Relational Database", "", "Traditional Database");
@@ -55,8 +63,10 @@ public class ComputerScience_SKOS {
          // ajout d'individus qui ont pour type les concepts skos qu'on a défini ( utilisé pour l'inference sur les individus )
          Resource i_databaseSystem = CSSkos.m.createResource(cs_ns+"i_databaseSystem");
          CSSkos.m.add(i_databaseSystem, RDF.type, CSSkos.m.getResource(cs_ns+"DatabaseSystem"));
+         
          Resource i_relational = CSSkos.m.createResource(cs_ns+"i_relational");
          CSSkos.m.add(i_relational, RDF.type, CSSkos.m.getResource(cs_ns+"Relational"));
+         
          Resource i_NoSql = CSSkos.m.createResource(cs_ns+"i_NoSql");
          CSSkos.m.add(i_NoSql, RDF.type, CSSkos.m.getResource(cs_ns+"NoSql"));
          
